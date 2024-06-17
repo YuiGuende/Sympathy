@@ -49,6 +49,10 @@ function playNextSong() {
     document.getElementById("song").src = songs[rancount[count]];
     document.getElementById('Namesong').innerText= namesong[rancount[count]];
     document.getElementById('author').innerText=author[rancount[count]];
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     count++;
     document.getElementById("song").play();
     if (count == max) {
@@ -148,6 +152,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/happy/Huong_Duong_340_Changg.mp3';
     document.getElementById('Namesong').innerText='Hướng Dương';
     document.getElementById('author').innerText='Changg';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -157,6 +165,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/happy/Muon_Roi_Ma_Sao_Con_436_Son_Tung_Mtp.mp3';
     document.getElementById('Namesong').innerText='Muộn Rồi Mà Sao Còn';
     document.getElementById('author').innerText='Sơn Tùng MTP';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -166,6 +178,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/happy/Qua_Lau_527_Vinh_Khuat.mp3';
     document.getElementById('Namesong').innerText='Quá Lâu';
     document.getElementById('author').innerText='Vinh Khuất';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -175,6 +191,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/happy/Thich_Qua_Rui_Na_258_Tlinh.mp3';
     document.getElementById('Namesong').innerText='Thích Quá Rùi Nà';
     document.getElementById('author').innerText='TLinh';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -184,6 +204,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/happy/Yeu_Anh_Di_Me_Anh_Ban_Banh_Mi_442_Phuc_Du.mp3';
     document.getElementById('Namesong').innerText='Yêu Anh Đi Mẹ Anh Bán Bánh Mì';
     document.getElementById('author').innerText='Phúc Du';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -193,6 +217,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/happy/Yeu_Nam_349_Emily.mp3';
     document.getElementById('Namesong').innerText='Yêu Nắm';
     document.getElementById('author').innerText='Emily';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -225,7 +253,12 @@ slider.oninput = () => {
     document.getElementById("song").src = 'music/happy/Huong_Duong_340_Changg.mp3';
     document.getElementById('Namesong').innerText='Hướng Dương';
     document.getElementById('author').innerText='Changg';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     document.getElementById("song").play();
+    count=0;
   }
   
   function backward() {
@@ -234,12 +267,20 @@ slider.oninput = () => {
       document.getElementById('Namesong').innerText= namesong[rancount[count]];
       document.getElementById("song").src = songs[rancount[count]];
       document.getElementById('author').innerText=author[rancount[count]];
+      if (ctrlIcon.classList.contains("fa-circle-play")) {
+        ctrlIcon.classList.remove("fa-circle-play");
+        ctrlIcon.classList.add("fa-circle-pause");
+        }
       document.getElementById("song").play();
     } else {
       count--;
       document.getElementById('Namesong').innerText= namesong[rancount[count]];
       document.getElementById("song").src = songs[rancount[count]];
       document.getElementById('author').innerText=author[rancount[count]];
+      if (ctrlIcon.classList.contains("fa-circle-play")) {
+        ctrlIcon.classList.remove("fa-circle-play");
+        ctrlIcon.classList.add("fa-circle-pause");
+        }
       document.getElementById("song").play();
     }
   }

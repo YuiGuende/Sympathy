@@ -41,13 +41,17 @@ var songs = ['music/chilling/Doi_317_52Hz.mp3','music/chilling/Mien_Man_324_Minh
     'music/chilling/Quen_Dan_Quen_412_Captain_Boy.mp3','music/chilling/Thay_Chua_355_Ngot.mp3'
     ,'music/chilling/Toi_Va_Em_401_Pink_Frog.mp3', 'music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3'];
 var namesong = ['Đợi','Miên Man','Quên Dần Quên','Thấy Chưa','Tôi Và Em','Bài Này Chill Phết'];
-var author=['52Hz','Minh Huy','Captain Boy','Ngọt','Pink Frog','Đen Vâu']
+var author=['52Hz','Minh Huy','Captain Boy','Ngọt','Pink Frog','Đen Vâu'];
 function playNextSong() {
   do {
     var max = 6;
     document.getElementById("song").src = songs[rancount[count]];
     document.getElementById('Namesong').innerText= namesong[rancount[count]];
     document.getElementById('author').innerText=author[rancount[count]];
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     count++;
     document.getElementById("song").play();
     if (count == max) {
@@ -143,9 +147,13 @@ slider.oninput = () => {
   function song4_1() {
     var song = document.getElementById('song');
     var sourceMp3 = document.getElementById('song');
-    sourceMp3.src = 'music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3';
+    sourceMp3.src ='music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3';
     document.getElementById('Namesong').innerText='Bài Này Chill Phết';
     ddocument.getElementById('author').innerText='Đen Vâu';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -155,6 +163,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/chilling/Doi_317_52Hz.mp3';
     document.getElementById('Namesong').innerText='Đợi';
     document.getElementById('author').innerText='52Hz';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -164,6 +176,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/chilling/Mien_Man_324_Minh_Huy.mp3';
     document.getElementById('Namesong').innerText='Miên Man';
     document.getElementById('author').innerText='Minh Huy';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -173,6 +189,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/chilling/Quen_Dan_Quen_412_Captain_Boy.mp3';
     document.getElementById('Namesong').innerText='Quên Dần Quên';
     document.getElementById('author').innerText='Captain Boy';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -182,6 +202,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/chilling/Thay_Chua_355_Ngot.mp3';
     document.getElementById('Namesong').innerText='Thấy Chưa';
     document.getElementById('author').innerText='Ngọt';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -191,6 +215,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/chilling/Toi_Va_Em_401_Pink_Frog.mp3';
     document.getElementById('Namesong').innerText='Tôi Và Em';
     document.getElementById('author').innerText='Pink Frog';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -213,17 +241,23 @@ slider.oninput = () => {
     }
     return array;
   }
-  
+  // function
+
   function shuffle2() {
     shuffle(rancount);
+    document.getElementById('iconmusic').setAttribute('style','text-shadow: 0 0 5px #FFECB3');
     playNextSong();
   }
   
   function playsong() {
-    document.getElementById("song").src = 'music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3';
+    document.getElementById("song").src ='/music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3';
     document.getElementById('Namesong').innerText='Bài Này Chill Phết';
     document.getElementById('author').innerText='Đen Vâu';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");}
     document.getElementById("song").play();
+    count=0;
   }
   
   function backward() {
@@ -232,12 +266,20 @@ slider.oninput = () => {
       document.getElementById('Namesong').innerText= namesong[rancount[count]];
       document.getElementById("song").src = songs[rancount[count]];
       document.getElementById('author').innerText=author[rancount[count]];
+      if (ctrlIcon.classList.contains("fa-circle-play")) {
+        ctrlIcon.classList.remove("fa-circle-play");
+        ctrlIcon.classList.add("fa-circle-pause");
+        }
       document.getElementById("song").play();
     } else {
       count--;
       document.getElementById('Namesong').innerText= namesong[rancount[count]];
       document.getElementById("song").src = songs[rancount[count]];
       document.getElementById('author').innerText=author[rancount[count]];
+      if (ctrlIcon.classList.contains("fa-circle-play")) {
+        ctrlIcon.classList.remove("fa-circle-play");
+        ctrlIcon.classList.add("fa-circle-pause");
+        }
       document.getElementById("song").play();
     }
   }

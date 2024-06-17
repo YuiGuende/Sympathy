@@ -48,6 +48,10 @@ function playNextSong() {
     document.getElementById('Namesong').innerText= namesong[rancount[count]];
     document.getElementById("song").src = songs[rancount[count]];
     document.getElementById('author').innerText=author[rancount[count]];
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     count++;
     document.getElementById("song").play();
     if (count == max) {
@@ -146,6 +150,10 @@ slider.oninput = () => {
     var sourceMp3 = document.getElementById('song');
     sourceMp3.src = 'music/Vietpop/2AM.mp3';
     document.getElementById('Namesong').innerText='2AM';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -155,6 +163,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/Vietpop/Anh_la_ngoai_le_cua_em.mp3';
     document.getElementById('Namesong').innerText='Anh là ngoại lệ của em';
     document.getElementById('author').innerText='Phương Ly';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -173,6 +185,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/Vietpop/Chung_ta_cua_hien_tai.mp3';
     document.getElementById('Namesong').innerText='Chúng ta của hiện tại';
     document.getElementById('author').innerText='Sơn Tùng MTP';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -182,6 +198,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/Vietpop/Da_lo_yeu_em_nhieu.mp3';
     document.getElementById('Namesong').innerText='Đã lỡ yêu em nhiều';
     document.getElementById('author').innerText='JustaTee';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -191,6 +211,10 @@ slider.oninput = () => {
     sourceMp3.src = 'music/Vietpop/Du_bao_thoi_tiet_hom_nay_mua.mp3';
     document.getElementById('Namesong').innerText='Dự báo thời tiết hôm nay mưa';
     document.getElementById('author').innerText='Grey D';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     song.load();
     song.play();
   }
@@ -224,7 +248,12 @@ slider.oninput = () => {
     document.getElementById("song").src = 'music/Vietpop/2AM.mp3';
     document.getElementById('Namesong').innerText='2AM';
     document.getElementById('author').innerText='2AM';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     document.getElementById("song").play();
+    count=0;
   }
   
   function backward() {
@@ -233,12 +262,20 @@ slider.oninput = () => {
       document.getElementById('Namesong').innerText= namesong[rancount[count]];
       document.getElementById("song").src = songs[rancount[count]];
       document.getElementById('author').innerText=author[rancount[count]];
+      if (ctrlIcon.classList.contains("fa-circle-play")) {
+        ctrlIcon.classList.remove("fa-circle-play");
+        ctrlIcon.classList.add("fa-circle-pause");
+        }
       document.getElementById("song").play();
     } else {
       count--;
       document.getElementById('Namesong').innerText= namesong[rancount[count]];
       document.getElementById("song").src = songs[rancount[count]];
       document.getElementById('author').innerText=author[rancount[count]];
+      if (ctrlIcon.classList.contains("fa-circle-play")) {
+        ctrlIcon.classList.remove("fa-circle-play");
+        ctrlIcon.classList.add("fa-circle-pause");
+        }
       document.getElementById("song").play();
     }
   }

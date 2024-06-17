@@ -42,13 +42,17 @@ var rancount = [0,1,2,3,4,5];
     'music/USUK/USUK/Kiss_Me_More.mp3','music/USUK/USUK/Streets.mp3'
     ,'music/USUK/USUK/Unforgettable.mp3', 'music/USUK/USUK/After_last_night.mp3'];
   var namesongs= ['Confident','Get You','Kiss Me More','Streets','Unforgettable','After last night'];
+  var author=['Justin Bieber','Daniel Caesar','Doja Cat','Doja Cat','Swae Lee','Bruno Mars']
 function playNextSong() {
-
- 
   do {
     var max = 6;
     document.getElementById("song").src = songs[rancount[count]];
     document.getElementById("Namesong").innerText=namesongs[rancount[count]];
+    document.getElementById('author').innerText=author[rancount[count]];
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     count++;
     document.getElementById("song").play();
     if (count == max) {
@@ -98,6 +102,11 @@ function song1_1() {
   var sourceMp3 = document.getElementById('song');
   sourceMp3.src = 'music/USUK/USUK/After_last_night.mp3';
   document.getElementById("Namesong").innerText='After last night';
+  document.getElementById('author').innerText='Bruno Mars';
+  if (ctrlIcon.classList.contains("fa-circle-play")) {
+    ctrlIcon.classList.remove("fa-circle-play");
+    ctrlIcon.classList.add("fa-circle-pause");
+    }
   song.load();
   song.play();
 }
@@ -106,6 +115,11 @@ function song1_2() {
   var sourceMp3 = document.getElementById('song');
   sourceMp3.src = 'music/USUK/USUK/Confident.mp3';
   document.getElementById("Namesong").innerText='Confident';
+  document.getElementById('author').innerText='Justin Bieber';
+  if (ctrlIcon.classList.contains("fa-circle-play")) {
+    ctrlIcon.classList.remove("fa-circle-play");
+    ctrlIcon.classList.add("fa-circle-pause");
+    }
   song.load();
   song.play();
 }
@@ -114,6 +128,11 @@ function song1_3() {
   var sourceMp3 = document.getElementById('song');
   sourceMp3.src = 'music/USUK/USUK/Get_you.mp3';
   document.getElementById("Namesong").innerText='Get You';
+  document.getElementById('author').innerText='Daniel Caesar';
+  if (ctrlIcon.classList.contains("fa-circle-play")) {
+    ctrlIcon.classList.remove("fa-circle-play");
+    ctrlIcon.classList.add("fa-circle-pause");
+    }
   song.load();
   song.play();
 }
@@ -122,6 +141,11 @@ function song1_4() {
   var sourceMp3 = document.getElementById('song');
   sourceMp3.src = 'music/USUK/USUK/Kiss_Me_More.mp3';
   document.getElementById("Namesong").innerText='Kiss Me More';
+  document.getElementById('author').innerText='Doja Cat';
+  if (ctrlIcon.classList.contains("fa-circle-play")) {
+    ctrlIcon.classList.remove("fa-circle-play");
+    ctrlIcon.classList.add("fa-circle-pause");
+    }
   song.load();
   song.play();
 }
@@ -130,6 +154,11 @@ function song1_5() {
   var sourceMp3 = document.getElementById('song');
   sourceMp3.src = 'music/USUK/USUK/Streets.mp3';
   document.getElementById("Namesong").innerText='Streets';
+  document.getElementById('author').innerText='Doja Cat';
+  if (ctrlIcon.classList.contains("fa-circle-play")) {
+    ctrlIcon.classList.remove("fa-circle-play");
+    ctrlIcon.classList.add("fa-circle-pause");
+    }
   song.load();
   song.play();
 }
@@ -138,6 +167,11 @@ function song1_6() {
   var sourceMp3 = document.getElementById('song');
   sourceMp3.src = 'music/USUK/USUK/Unforgettable.mp3';
   document.getElementById("Namesong").innerText='Unforgettable';
+  document.getElementById('author').innerText='Swae Lee';
+  if (ctrlIcon.classList.contains("fa-circle-play")) {
+    ctrlIcon.classList.remove("fa-circle-play");
+    ctrlIcon.classList.add("fa-circle-pause");
+    }
   song.load();
   song.play();
 }
@@ -246,7 +280,13 @@ playNextSong();
 function playsong() {
   document.getElementById("song").src = 'music/USUK/USUK/After_last_night.mp3';
   document.getElementById("Namesong").innerText="After last night";
+  document.getElementById('author').innerText='Bruno Mars';
+  if (ctrlIcon.classList.contains("fa-circle-play")) {
+    ctrlIcon.classList.remove("fa-circle-play");
+    ctrlIcon.classList.add("fa-circle-pause");
+    }
   document.getElementById("song").play();
+  count=0;
 }
 
 function backward() {
@@ -255,11 +295,21 @@ function backward() {
     count = songs.length - 1;
     document.getElementById("song").src = songs[count];
     document.getElementById("Namesong").innerText=namesongs[count];
+    document.getElementById('author').innerText=author[rancount[count]];
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     document.getElementById("song").play();
   } else {
     count--;
     document.getElementById("Namesong").innerText=namesongs[count];
     document.getElementById("song").src = songs[count];
+    document.getElementById('author').innerText=author[rancount[count]];
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
     document.getElementById("song").play();
   }
 }
@@ -296,3 +346,21 @@ function openprofile() {
 }
 
 
+
+function follow(){
+var follow=document.getElementById('Follow');
+if(follow.innerText=='Follow'){
+  follow.innerText='Followed';
+}else{
+  follow.innerText='Follow';
+}
+}
+
+function addf(){
+  var addfriend=document.getElementById('addfriend');
+  if(addfriend.innerText=='Add friend'){
+    addfriend.innerText='Friend ✓ ';
+  }else{
+    addfriend.innerText='Add friend';
+  }
+}
