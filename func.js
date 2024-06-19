@@ -364,3 +364,14 @@ function addf(){
     addfriend.innerText='Add friend';
   }
 }
+
+// $("body").click
+// (
+//   function(e)
+//   {
+//     if(e.target.className !== "right")
+//     {
+//       document.getElementById('friendsList').setAttribute('style','display: none;');
+//     }
+//   }
+// );

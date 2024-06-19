@@ -72,10 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Element with class .comment not found.');
     }
 });
+
 function openChat(name,playlist,ava) {
   let chatContainer = document.querySelector('.chat-container');
-  
-  // Kiểm tra xem hộp chat đã tồn tại chưa
+   if (chatContainer.style.display =='none'){
+    chatContainer.style.display ='block';
+  }
+  // Kiểm tra xem hộp chat đã tồn tại chưas
   let existingChatBox = document.querySelector('.boxchatscreen');
   if (!existingChatBox) {
       // Tạo một hộp chat mới
@@ -89,16 +92,14 @@ function openChat(name,playlist,ava) {
                     <div class="a6">${name}</div>
                     <div class="a7">In ${playlist}</div>
                 </div>
-                <div class="hidden"></div>
+                <div onclick='chatend()' class="hidden"></div>
             </div>
             
             <div class="chatscreen"></div>
             <div class="chat-footer">
                 <input type="text" class="chat-input" placeholder="Nhập tin nhắn...">
             </div>
-
       `;
-      
       chatContainer.appendChild(chatBox);
       chatBox.style.display = 'block';
   } else {
@@ -110,5 +111,8 @@ function openChat(name,playlist,ava) {
 }
 }
 
-
+function chatend(){
+  let chatContainer = document.querySelector('.chat-container');
+  chatContainer.style.display = 'none';
+}
 

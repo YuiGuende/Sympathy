@@ -144,19 +144,21 @@ slider.oninput = () => {
     }
   }
 
-  function song4_1() {
-    var song = document.getElementById('song');
-    var sourceMp3 = document.getElementById('song');
-    sourceMp3.src ='music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3';
-    document.getElementById('Namesong').innerText='Bài Này Chill Phết';
-    ddocument.getElementById('author').innerText='Đen Vâu';
-    if (ctrlIcon.classList.contains("fa-circle-play")) {
-      ctrlIcon.classList.remove("fa-circle-play");
-      ctrlIcon.classList.add("fa-circle-pause");
-      }
-    song.load();
-    song.play();
-  }
+  // function song4_1() {
+  //   var song = document.getElementById('song');
+  //   var sourceMp3 = document.getElementById('song');
+  //   sourceMp3.src ='music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3';
+  //   document.getElementById('Namesong').innerText='Bài Này Chill Phết';
+  //   ddocument.getElementById('author').innerText='Đen Vâu';
+  //   if (ctrlIcon.classList.contains("fa-circle-play")) {
+  //     ctrlIcon.classList.remove("fa-circle-play");
+  //     ctrlIcon.classList.add("fa-circle-pause");
+  //     }
+  //   song.load();
+  //   song.play();
+  // }
+
+
   function song4_2() {
     var song = document.getElementById('song');
     var sourceMp3 = document.getElementById('song');
@@ -170,6 +172,21 @@ slider.oninput = () => {
     song.load();
     song.play();
   }
+  function song4_7() {
+    var song = document.getElementById('song');
+    var sourceMp3 = document.getElementById('song');
+    sourceMp3.src = 'music/chilling/Bai_Nay_Chill_Phet_434_Den_Vau.mp3';
+    document.getElementById('Namesong').innerText='Bài Này Chill Phết';
+    document.getElementById('author').innerText='Đen';
+    if (ctrlIcon.classList.contains("fa-circle-play")) {
+      ctrlIcon.classList.remove("fa-circle-play");
+      ctrlIcon.classList.add("fa-circle-pause");
+      }
+    song.load();
+    song.play();
+  }
+
+
   function song4_3() {
     var song = document.getElementById('song');
     var sourceMp3 = document.getElementById('song');
@@ -245,7 +262,7 @@ slider.oninput = () => {
 
   function shuffle2() {
     shuffle(rancount);
-    document.getElementById('iconmusic').setAttribute('style','text-shadow: 0 0 5px #FFECB3');
+    document.getElementById('iconmusic').setAttribute('style','text-shadow: 0 0 20px #034128');
     playNextSong();
   }
   
